@@ -1,8 +1,11 @@
 import { Router } from 'express'
-import UserController from '../controllers/user'
+import userController from '../controllers/user'
 
 const router = new Router()
 
-router.get('/', UserController.getUser)
+router.get('/', userController.getUser)
+router.get('/signup', userController.signupUser)
+router.get('/login', userController.loginUser)
+router.get('/deactivate', userController.deactivateUser)
 
 export default router

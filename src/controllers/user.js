@@ -1,7 +1,8 @@
-const UserController = {
-  getUser: async (req, res) => {
-    res.send('hello world')
-  }
+const userController = {
+  getUser: (req, res) => {},
+  signupUser: (req, res) => {},
+  loginUser: (req, res) => {},
+  deactivateUser: (req, res) => {}
 }
 
-export default UserController
+export default userController
