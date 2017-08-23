@@ -5,7 +5,10 @@ const PAIRS = ['USDT_BTC', 'USDT_ETH', 'USDT_XRP', 'USDT_LTC']
 const BASE_URL = 'https://poloniex.com/public'
 const periods = ['hour', 'day', 'week', 'month', 'year']
 
-export default class Poloniex {
+// *****************************************************************
+// This Class is for fetching coin data from the Poloniex public api
+// *****************************************************************
+export default class CoinApi {
   // Returns converted start, end, and period
   getTimes = period => {
     let end = new Date()

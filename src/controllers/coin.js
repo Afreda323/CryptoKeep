@@ -1,6 +1,6 @@
-import Poloniex from '../services/poloniex'
+import CoinApi from '../services/coinapi'
 
-let polo = new Poloniex()
+let polo = new CoinApi()
 
 const coinController = {
   getCoins: async (req, res) => {
