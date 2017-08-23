@@ -2,7 +2,6 @@ import { Router } from 'express'
 import userController from '../controllers/user'
 
 const router = new Router()
-
 router.get('/', userController.getUser)
 router.post('/signup', userController.signupUser)
 router.post('/login', userController.loginUser)

@@ -2,13 +2,11 @@ import axios from 'axios'
 import qs from 'qs'
 
 const PAIRS = ['USDT_BTC', 'USDT_ETH', 'USDT_XRP', 'USDT_LTC']
-
 const BASE_URL = 'https://poloniex.com/public'
-
 const periods = ['hour', 'day', 'week', 'month', 'year']
 
 export default class Poloniex {
-
+  // Returns converted start, end, and period
   getTimes = period => {
     let end = new Date()
     let start = new Date()
@@ -46,6 +44,8 @@ export default class Poloniex {
     end = end.getTime() / 1000
     return { start, end, csPeriod }
   }
+
+  // Creates URL for get request
   createRequestUrl = (currencyPair, start, end, period) => {
     const obj = {
       currencyPair,
@@ -57,6 +57,7 @@ export default class Poloniex {
     return `${BASE_URL}?command=returnChartData&${query}`
   }
 
+  // Returns desired Coins and prices
   getPrices = async period => {
     let prices = {}
     const { start, end, csPeriod } = this.getTimes(period)
