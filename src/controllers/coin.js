@@ -1,4 +1,4 @@
-import Poloniex from '../poloniex'
+import Poloniex from '../services/poloniex'
 
 let polo = new Poloniex()
 

@@ -8,9 +8,7 @@ const BASE_URL = 'https://poloniex.com/public'
 const periods = ['hour', 'day', 'week', 'month', 'year']
 
 export default class Poloniex {
-  constructor() {
-    this.baseUrl = BASE_URL
-  }
+
   getTimes = period => {
     let end = new Date()
     let start = new Date()
@@ -56,7 +54,7 @@ export default class Poloniex {
       period
     }
     const query = qs.stringify(obj)
-    return `${this.baseUrl}?command=returnChartData&${query}`
+    return `${BASE_URL}?command=returnChartData&${query}`
   }
 
   getPrices = async period => {
