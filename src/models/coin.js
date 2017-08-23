@@ -8,7 +8,7 @@ const coinSchema = new Schema({
   },
   coin: {
     type: String,
-    enum: ['BTC', 'ETH', 'LTC'],
+    enum: ['BTC', 'ETH', 'LTC', 'XRP'],
     required: true
   },
   buy: {
