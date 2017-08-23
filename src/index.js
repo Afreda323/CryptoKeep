@@ -5,14 +5,15 @@ import bodyParser from 'body-parser'
 import config from './config'
 
 import userRouter from './routes/user'
+import coinsRouter from './routes/coin'
 
 const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 
 // Routes
+app.use('/api/coins', coinsRouter)
 app.use('/api/user', userRouter)
-
 mongoose.promise = Promise
 mongoose
   .connect(config.mongo)

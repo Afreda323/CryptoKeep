@@ -1,8 +1,11 @@
 const userController = {
-  getUser: (req, res) => {},
-  signupUser: (req, res) => {},
-  loginUser: (req, res) => {},
-  deactivateUser: (req, res) => {}
+  getUser: async (req, res) => {},
+  signupUser: async (req, res) => {},
+  loginUser: async (req, res) => {},
+  deactivateUser: async (req, res) => {},
+  addCoins: async (req, res) => {},
+  removeCoins: async (req, res) => {},
+  editCoins: async (req, res) => {}
 }
 
 export default userController
