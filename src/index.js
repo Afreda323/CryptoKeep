@@ -22,8 +22,7 @@ app.use(bodyParser.json())
 
 //socket.io
 const io = new SocketIO(server)
-
-// handle disconnection
+// handle connection
 io.on('connection', async socket => {
   console.log(`Client ${socket.id} connected.`)
 
